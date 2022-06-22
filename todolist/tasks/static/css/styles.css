@@ -1,0 +1,102 @@
+.container-fluid {
+    padding: 0;
+}
+
+/* Navbar */
+
+.navbar {
+    border-bottom: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+.navbar-nav {
+    margin: auto;
+}
+
+.navbar-brand {
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav a.nav-link {
+    color: #000;
+    letter-spacing: 1px;
+}
+
+.navbar-collapse {
+    padding-right: 8rem;
+}
+
+/* Botão de adicionar*/
+
+.add-div {
+    background-color: #2b961f;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 6px;
+    border-radius: 5px;
+    margin-right: 25px;
+}
+
+.fa-fa-plus {
+    color: #ffffff;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+/* Search */
+.fas.fa-search{
+    margin: -50px;
+}
+
+.search-div{
+    padding: 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+/* Lista de Tarefas */
+.list-div {
+    padding: 0%;
+}
+
+.task-list {
+    padding-left: 0;
+}
+
+.task-item { 
+    list-style: none;
+    font-size: 20px;
+    height: 50px;
+    padding-top: 10px;
+    border-bottom: 1px solid #000000;
+}
+
+.fas.fa-trash, .fas.fa-edit {
+    cursor: pointer;
+    margin: 5px;
+    font-size: 20px;
+    float: right;
+}
+
+.fas.fa-trash { 
+    color: #ff0000;
+}
+
+/* footer */
+
+footer {
+    background-color: #000;
+    height: 300px;
+    border-top: 2px solid #000;
+}
+
+footer p {
+color: #ffffff;
+text-align: center;
+top: 50%;
+position: relative;
+}
+
