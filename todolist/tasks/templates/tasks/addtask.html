@@ -4,12 +4,12 @@
 
 {% block content %}
 <div class="offset-1 col-10 list-div">
-    <h1>Add your new task</h1>
+    <h1>Add your new task <i class="fa-solid fa-check"></i></h1>
     <form method="POST">
         {% csrf_token %}
         {{ form|crispy }}
+        <input type="submit" class="btn btn-success" value="Create task">
     </form>
-    <input type="submit" class="btn btn-success" value="Create task">
 </div>
 
 {% endblock %}

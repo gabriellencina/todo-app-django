@@ -4,7 +4,24 @@
 
 {% block content %}
 <div class="offset-1 col-10 list-div">
-    <h1>To-Do List</h1>
+    <h1>To-Do List <i class="fa-solid fa-check"></i></h1>
+    <div class="container dashboard">
+
+        <div class="col-4 dashbord-box" id="dashboard-lastdays">
+            <h4>Completed in the last 30 days</h4>
+            <span>{{ tasksrecently }}</span>
+        </div>
+
+        <div class="col-4 dashbord-box" id="dashboard-done">
+            <h4>Finished tasks</h4>
+            <span>{{ taskdone }}</span>
+        </div>
+
+        <div class="col-4 dashbord-box" id="dashboard-doing">
+            <h4>Tasks to do</h4>
+            <span>{{ tasksdoing }}</span>
+        </div>
+    </div>
 
     <a id="add-link" href="newtask/">
         <div class="col-2 add-div">
@@ -21,6 +38,15 @@
     </div>
 
 
+    <div class="col-12 filter-div">
+        <span>Filter by:</span>
+        <select name="filter" id="filter" class="form-control">
+            <option value="done">Options</option>
+            <option value="done">Completed tasks</option>
+            <option value="doing">Tasks to do</option>
+        </select>
+    </div>
+
     {% if messages %}
     <ul class="messages">
         {% for message in messages %}
@@ -30,15 +56,21 @@
     </ul>
     {% endif %}
 
-    {% for task in tasks %}
     <ul class="task-list">
+        {% for task in tasks %}
+        {% if task.done == 'doing' %}
         <li class="task-item">
+            {% else %}
+        <li class="task-item done">
+            {% endif %}
             <span><a href="/task/{{task.id}}">{{task.title}}</a></span>
             <a href="delete/{{task.id}}" class="delete-btn"><span><i class="fas fa-trash"></i></span></a>
             <a href="edit/{{task.id}}"><span><i class="fas fa-edit"></i></span></a>
+            <a href="changestatus/{{task.id}}"><span><i class="fas fa-check"></i></span></a>
         </li>
+        {% endfor %}
     </ul>
-    {% endfor %}
+
     <div class="pagination">
         <span class="step-links">
             {% if tasks.has_previous %}

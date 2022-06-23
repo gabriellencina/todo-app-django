@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="offset-1 col-10 list-div">
-    <h1>Editing'{{task.title}}'</h1>
+    <h1>Editing <i class="fa-solid fa-pen-to-square"></i> '{{task.title}}'</h1>
     <form method="POST">
         {% csrf_token %}
         {{ form|crispy }}
