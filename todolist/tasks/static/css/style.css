@@ -2,8 +2,16 @@
     padding: 0;
 }
 
-/* Navbar */
+.row{
+    margin: 0;
+}
 
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Navbar */
 .navbar {
     border-bottom: 1px solid #000;
     margin-bottom: 20px;
@@ -28,9 +36,12 @@
 }
 
 /* Botão de adicionar*/
+#add-link {
+    text-decoration: none;
+}
 
 .add-div {
-    background-color: #2b961f;
+    background-color: #198754;
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
@@ -46,11 +57,14 @@
 }
 
 /* Search */
-.fas.fa-search{
-    margin: -50px;
+.fas.fa-search {
+    position: absolute;
+    top: 9.8rem;
+    left: 100rem;
+    cursor: pointer;
 }
 
-.search-div{
+.search-div {
     padding: 0px;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -66,7 +80,7 @@
     padding-left: 0;
 }
 
-.task-item { 
+.task-item {
     list-style: none;
     font-size: 20px;
     height: 50px;
@@ -74,19 +88,33 @@
     border-bottom: 1px solid #000000;
 }
 
-.fas.fa-trash, .fas.fa-edit {
+.fas.fa-trash,
+.fas.fa-edit {
     cursor: pointer;
     margin: 5px;
     font-size: 20px;
     float: right;
 }
 
-.fas.fa-trash { 
+.fas.fa-trash {
     color: #ff0000;
 }
 
-/* footer */
+.fas.fa-edit {
+    color: #000000;
+}
 
+/* Messages */
+ul.messages {
+    padding: 0;
+    color: #ff0000;
+}
+
+ul.messages li {
+    list-style: none;
+}
+
+/* footer */
 footer {
     background-color: #000;
     height: 300px;
@@ -94,9 +122,43 @@ footer {
 }
 
 footer p {
-color: #ffffff;
-text-align: center;
-top: 50%;
-position: relative;
+    color: #ffffff;
+    text-align: center;
+    top: 50%;
+    position: relative;
 }
 
+/* paginação */
+.pagination {
+    margin-bottom: 20px;
+}
+.step-links {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.step-links .current {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.btn-success {
+   margin-top: 1rem;
+}
+
+/* login */
+.auth-card {
+    margin-bottom: 30px;
+}
+
+[type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+.change-form-p {
+    margin-top: 30px;
+    text-align: center;
+}
