@@ -5,7 +5,7 @@ Todo app is an application for you to schedule your day-to-day tasks, making you
 
 
 
-## Obejetivo 🎯
+## Objetivo 🎯
 O principal objetivo foi ampliar meu conhecimento com o framework Django, para que nos meus próximos projetos eu consiga ter novas ideias
 e assim aplicá-las.</br>
 
